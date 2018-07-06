@@ -47,10 +47,31 @@ Up:
 	Sleep, 60
 Return
 
+Left:
+	Send {left down}
+	Sleep, 60
+	Send {left up}
+	Sleep, 60
+Return
+
+Right:
+	Send {right down}
+	Sleep, 60
+	Send {right up}
+	Sleep, 60
+Return
+
 Enter:
 	Send {Enter down}
 	Sleep, 60
 	Send {Enter up}
+	Sleep, 60
+Return
+
+E:
+	Send {E down}
+	Sleep, 60
+	Send {E up}
 	Sleep, 60
 Return
 
@@ -150,6 +171,32 @@ Numpad3:: ; Leave office in buzzmerd
 	Gosub, Enter
 return
 
+Numpad4:: ; Buy crates at laptop (up warehouse)
+	Gosub, E
+	Sleep, 1000
+	Gosub, Enter
+	Sleep, 1000
+	Gosub, Down
+	Sleep, 250
+	Gosub, Enter
+	Gosub, Left
+	Gosub, Enter
+	Gosub, Up
+	Gosub, Enter
+return
 
+Numpad5:: ; Buy crates at laptop (right warehouse)
+	Gosub, E
+	Sleep, 1000
+	Gosub, Enter
+	Sleep, 1000
+	Gosub, Down
+	Sleep, 250
+	Gosub, Enter
+	Gosub, Left
+	Gosub, Enter
+	Gosub, Right
+	Gosub, Enter
+return
 
 #IfWinActive
