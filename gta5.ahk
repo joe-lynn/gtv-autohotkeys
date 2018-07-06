@@ -134,5 +134,22 @@ Numpad2:: ; Eat a normal snack. This will cycle through them as they run out.
 	Gosub, Enter
 return
 
+Numpad3:: ; Leave office in buzzmerd
+	Gosub, Down
+	Gosub, Down
+	Gosub, Enter
+	Gosub, Down
+	Gosub, Down
+	Gosub, Down
+	Gosub, Down
+	Gosub, Down
+	Gosub, Down
+	Gosub, Down
+	Gosub, Down
+	Gosub, Enter
+	Gosub, Enter
+return
+
+
 
 #IfWinActive
