@@ -47,31 +47,10 @@ Up:
 	Sleep, 60
 Return
 
-Left:
-	Send {left down}
-	Sleep, 60
-	Send {left up}
-	Sleep, 60
-Return
-
-Right:
-	Send {right down}
-	Sleep, 60
-	Send {right up}
-	Sleep, 60
-Return
-
 Enter:
 	Send {Enter down}
 	Sleep, 60
 	Send {Enter up}
-	Sleep, 60
-Return
-
-E:
-	Send {E down}
-	Sleep, 60
-	Send {E up}
 	Sleep, 60
 Return
 
@@ -155,48 +134,17 @@ Numpad2:: ; Eat a normal snack. This will cycle through them as they run out.
 	Gosub, Enter
 return
 
-Numpad3:: ; Leave office in buzzmerd
-	Gosub, Down
-	Gosub, Down
-	Gosub, Enter
-	Gosub, Down
-	Gosub, Down
-	Gosub, Down
-	Gosub, Down
-	Gosub, Down
-	Gosub, Down
-	Gosub, Down
-	Gosub, Down
-	Gosub, Enter
-	Gosub, Enter
++p::
+     SetTimer, AFK, 300000
+     Gosub, AFK
 return
 
-Numpad4:: ; Buy crates at laptop (up warehouse)
-	Gosub, E
-	Sleep, 1000
-	Gosub, Enter
-	Sleep, 1000
-	Gosub, Down
-	Sleep, 250
-	Gosub, Enter
-	Gosub, Left
-	Gosub, Enter
-	Gosub, Up
-	Gosub, Enter
++s::
+     SetTimer, AFK, Off
 return
-
-Numpad5:: ; Buy crates at laptop (right warehouse)
-	Gosub, E
-	Sleep, 1000
-	Gosub, Enter
-	Sleep, 1000
-	Gosub, Down
-	Sleep, 250
-	Gosub, Enter
-	Gosub, Left
-	Gosub, Enter
-	Gosub, Right
-	Gosub, Enter
+ 
+AFK:
+     Gosub, Menu
 return
 
 #IfWinActive
