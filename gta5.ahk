@@ -54,6 +54,13 @@ Enter:
 	Sleep, 60
 Return
 
+Esc:
+	Send {Esc down}
+	Sleep, 60
+	Send {Esc up}
+	Sleep, 60
+Return
+
 Menu:
 	Send {M down}
 	Sleep, 60
