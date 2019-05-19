@@ -54,6 +54,13 @@ Enter:
 	Sleep, 60
 Return
 
+Esc:
+	Send {Esc down}
+	Sleep, 60
+	Send {Esc up}
+	Sleep, 60
+Return
+
 Menu:
 	Send {M down}
 	Sleep, 60
@@ -145,6 +152,52 @@ return
  
 AFK:
      Gosub, Menu
+return
+
+Numpad8:: ; Auto-outfit an X80 Proto export vehicle
+	; tracker
+	Gosub, Enter
+	Gosub, Enter
+	; plate
+	Gosub, Enter
+	Gosub, Down
+	Gosub, Enter
+	Gosub, Esc
+	Gosub, Enter
+	; respray
+	Gosub, Enter
+	Gosub, Enter
+	Gosub, Down
+	Gosub, Enter
+	Gosub, Down ; could be random from 0-10
+	Gosub, Enter
+	Gosub, Esc
+	Gosub, Esc
+	Gosub, Esc
+	Gosub, Enter
+	; performance upgrades
+	Gosub, Enter
+	Gosub, Enter
+	; chassis
+	Gosub, Enter
+	Gosub, Enter
+	Gosub, Up
+	Gosub, Enter
+	Gosub, Esc
+	Gosub, Esc
+	Gosub, Enter
+	; wheels
+	Gosub, Enter
+	Gosub, Enter
+	Gosub, Enter
+	Gosub, Enter
+	Gosub, Down ; could be random from 0-10
+	Gosub, Enter
+	Gosub, Esc
+	Gosub, Esc
+	Gosub, Esc
+	Gosub, Esc
+	Gosub, Enter
 return
 
 #IfWinActive
