@@ -116,6 +116,21 @@ NumpadAdd:: ; ceo buzzard spawn!
 	Gosub, Enter
 return
 
+NumpadSub:: ; ceo oppressor mk2 spawn!
+	Gosub, Menu
+	Sleep, 250
+    Gosub, Down
+	Gosub, Down
+	Gosub, Down
+	Gosub, Down
+	Gosub, Down
+	Gosub, Enter ; Enter terrorbyte menu
+	Gosub, Down
+	Gosub, Down
+	Gosub, Enter ; Spawn opressor mk2 near you if no other personal vehicle and in public lobby
+    Gosub, Menu
+return
+
 Numpad1:: ; Apply normal armor
 	Gosub, Menu
 	Sleep, 250		; Extra long sleep just to make sure the menu has time to appear properly.
