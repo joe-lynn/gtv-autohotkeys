@@ -215,4 +215,22 @@ Numpad8:: ; Auto-outfit an X80 Proto export vehicle
 	Gosub, Enter
 return
 
-#IfWinActive
+Numpad7:: ; Test auto-mk2 speed fly straight
+	Send {W down}
+	Send {Space down}
+	BreakLoop = 0
+	Loop {
+		if (BreakLoop = 1)
+			break
+		Send {9 down}
+		Sleep, 125
+		Send {9 up}
+		Sleep, 335
+	}
+return
+
+NumpadDiv:: ; Stop test auto-mk2 speed fly straight
+	Send {W up}
+	Send {Space up}
+	BreakLoop = 1
+return
