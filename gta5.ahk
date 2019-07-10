@@ -116,6 +116,21 @@ NumpadAdd:: ; ceo buzzard spawn!
 	Gosub, Enter
 return
 
+NumpadSub:: ; ceo oppressor mk2 spawn!
+	Gosub, Menu
+	Sleep, 250
+    Gosub, Down
+	Gosub, Down
+	Gosub, Down
+	Gosub, Down
+	Gosub, Down
+	Gosub, Enter ; Enter terrorbyte menu
+	Gosub, Down
+	Gosub, Down
+	Gosub, Enter ; Spawn opressor mk2 near you if no other personal vehicle and in public lobby
+    Gosub, Menu
+return
+
 Numpad1:: ; Apply normal armor
 	Gosub, Menu
 	Sleep, 250		; Extra long sleep just to make sure the menu has time to appear properly.
@@ -200,4 +215,22 @@ Numpad8:: ; Auto-outfit an X80 Proto export vehicle
 	Gosub, Enter
 return
 
-#IfWinActive
+Numpad7:: ; Autopilot to fly straight on oppressor mk2, use another button to stop autopilot
+	Send {W down}
+	Send {Space down}
+	BreakLoop = 0
+	Loop {
+		if (BreakLoop = 1)
+			break
+		Send {9 down}
+		Sleep, 125
+		Send {9 up}
+		Sleep, 300
+	}
+return
+
+NumpadDiv:: ; How to stop oppressor mk2 autopilot
+	Send {W up}
+	Send {Space up}
+	BreakLoop = 1
+return
