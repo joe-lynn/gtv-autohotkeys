@@ -215,7 +215,7 @@ Numpad8:: ; Auto-outfit an X80 Proto export vehicle
 	Gosub, Enter
 return
 
-Numpad7:: ; Test auto-mk2 speed fly straight
+Numpad7:: ; Autopilot to fly straight on oppressor mk2, use another button to stop autopilot
 	Send {W down}
 	Send {Space down}
 	BreakLoop = 0
@@ -225,11 +225,11 @@ Numpad7:: ; Test auto-mk2 speed fly straight
 		Send {9 down}
 		Sleep, 125
 		Send {9 up}
-		Sleep, 335
+		Sleep, 300
 	}
 return
 
-NumpadDiv:: ; Stop test auto-mk2 speed fly straight
+NumpadDiv:: ; How to stop oppressor mk2 autopilot
 	Send {W up}
 	Send {Space up}
 	BreakLoop = 1
