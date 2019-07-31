@@ -77,6 +77,7 @@ Numpad4:: ; Apply ceo armor
 	Sleep, 250		; Extra long sleep just to make sure the menu has time to appear properly.
 	Gosub, Down
 	Gosub, Down
+	Gosub, Down
 	Gosub, Enter
 	Gosub, Down
 	Gosub, Enter
@@ -91,6 +92,7 @@ return
 Numpad5:: ; open ceo snack
 	Gosub, Menu
 	Sleep, 250
+	Gosub, Down
 	Gosub, Down
 	Gosub, Down
 	Gosub, Enter
@@ -119,11 +121,14 @@ return
 NumpadSub:: ; ceo oppressor mk2 spawn!
 	Gosub, Menu
 	Sleep, 250
-    Gosub, Down
+    	Gosub, Down
 	Gosub, Down
 	Gosub, Down
 	Gosub, Down
 	Gosub, Down
+	Gosub, Down
+	Gosub, Enter ; Enter services
+	Gosub, Up
 	Gosub, Enter ; Enter terrorbyte menu
 	Gosub, Down
 	Gosub, Down
@@ -134,6 +139,7 @@ return
 Numpad1:: ; Apply normal armor
 	Gosub, Menu
 	Sleep, 250		; Extra long sleep just to make sure the menu has time to appear properly.
+	Gosub, Down
 	Gosub, Down
 	Gosub, Enter
 	Gosub, Down
@@ -149,6 +155,7 @@ return
 Numpad2:: ; Eat a normal snack. This will cycle through them as they run out.
 	Gosub, Menu
 	Sleep, 250
+	Gosub, Down
 	Gosub, Down
 	Gosub, Enter
 	Gosub, Down
